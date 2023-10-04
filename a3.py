@@ -355,8 +355,8 @@ if __name__ == "__main__":
     assert sorted(search_pa_list(["who", "directed", "jaws"])) == sorted(
         ["steven spielberg"]
     ), "failed search_pa_list test 2"
-    # assert sorted(
-    #     search_pa_list(["what", "movies", "were", "made", "in", "2020"])
-    # ) == sorted(["No answers"]), "failed search_pa_list test 3"
+    assert sorted(
+        search_pa_list(["what", "movies", "were", "made", "in", "2020"])
+    ) == sorted(["No answers"]), "failed search_pa_list test 3"
 
     print("All tests passed!")

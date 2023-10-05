@@ -47,6 +47,7 @@ movie_db: List[Tuple[str, str, int, List[str]]] = [
             "larry fishburne",
             "tyra ferrell",
             "morris chestnut",
+            "Dog movie",
         ],
     ),
     (

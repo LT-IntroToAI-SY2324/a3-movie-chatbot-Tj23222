@@ -209,6 +209,7 @@ def year_by_title(matches: List[str]) -> List[int]:
     
 
 
+
 def title_by_actor(matches: List[str]) -> List[str]:
     """Finds titles of all movies that the given actor was in
 
@@ -225,7 +226,17 @@ def title_by_actor(matches: List[str]) -> List[str]:
             results.append(get_title(movie))
     #print(results)   
     return results
-    
+
+def first_movie_made(matches: List[str]) -> List[str]:
+
+    results = []
+    for movie in movie_db:
+        if int(matches[0]) == 1974:
+            #print(get_title(movie))
+            results.append(get_title(movies))
+    return results
+
+
 
 
 # dummy argument is ignored and doesn't matter
@@ -358,5 +369,9 @@ if __name__ == "__main__":
     assert sorted(
         search_pa_list(["what", "movies", "were", "made", "in", "2020"])
     ) == sorted(["No answers"]), "failed search_pa_list test 3"
+    assert sorted(first_movie_made([]))== sorted(
+        [1974]
+    )
 
+    
     print("All tests passed!")
